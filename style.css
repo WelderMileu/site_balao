@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+:root {
+	--primary-color: #909090;
+	--secondary-color: #303030;
+	--light-color: #fff;
+};
+
+*,
+html,
+#root {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	width: 100%;
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body,
+input,
+button,
+a {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+p,
+h1 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+nav {
+	width: 100%;
+	position: fixed;
+	z-index: 3000;
+
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav
+.content-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 80%;
+	height: 65px;
+	background-color: var(--light-color);
+}
+
+nav 
+header 
+a{
+	font-weight: 700;
+	font-size: 1.2rem;
+	padding-left: 25px;
+	color: var(--secondary-color);
+}
+
+nav
+ul {
+	width: 60%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav
+ul 
+li:nth-child(6) a {
+	padding: 21px 53px;
+	background-color: #ec3b12;
+	color: var(--light-color);
+	font-weight: 500;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	background-image: url(./assets/image-background.jpeg);
+	background-position: center;
+	background-size: cover;
+}
+
+.container 
+.content-header {
+	padding-top: 100px;
+	padding-left: 140px;
+	color: var(--light-color);
+}
+
+.container 
+.content-header p:nth-child(1) {
+	font-size: 2rem;
+	margin-block-start: 1em;
+	margin-block-end: 0;
+}
+
+.container 
+.content-header h1 {
+	font-size: 5rem;
+	margin-block-start: 0;
+	margin-block-end: .30em;
+}
+
+.container 
+.content-header button {
+	border:none;
+	background-color: transparent;
+	color: var(--light-color);
+	font-weight: 500;
+	cursor:pointer !important;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.container 
+.content-header 
+button svg {
+	padding-left: 10px;
+}
+
+.container 
+.cards {
+	position: relative;
+	padding-top: 58px;
+	padding-left: 140px;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.container 
+.cards
+div {
+	padding: 30px;
+	font-weight: 500;
+}
+
+.container 
+.cards
+div:nth-child(1) {
+	position: relative;
+	background-color: var(--light-color);
+	font-weight: 300;
+}
+
+.container 
+.cards
+div:nth-child(1)
+button {
+	position: absolute;
+	border:none;
+	background-color: transparent;
+	top: 65px;
+	left: 80%;
+}
+
+.container 
+.cards
+div:nth-child(2) {
+	width: 60%;
+	position: relative;
+	background-color: rgba(0,0,0,.4);
+	backdrop-filter: blur(2px);
+	color: var(--light-color);
+	font-size: 1.2rem;
+}
+
+.container 
+.videos-fluid {
+	position: absolute;
+	bottom: -60px;
+
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.container 
+.videos-fluid 
+.video-content {
+	width: 150px;
+	height: 240px;
+	overflow: hidden;
+	background-color: orange;
+	margin: 10px;
+
+	border-radius: 15px;
+	position: relative;
+	transition: .3s ease-in-out;
+}
+
+.container 
+.videos-fluid 
+.video-content:hover {
+	transform: scale(1.1);
+}
+
+.container 
+.videos-fluid 
+.video-content i {
+	position: absolute;
+	z-index: 4000 !important;
+	color: var(--primary-color);
+	bottom: 20px;
+	right: 20px;
+	font-size: .8rem;
+	background-color: var(--light-color);
+	padding: 10px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.container 
+.videos-fluid 
+.video-content img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 1050px) {
+	nav
+	ul {
+		width: 60%;
+
+		display: none;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.container 
+	.videos-fluid {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container 
+	.content-header h1 {
+		font-size: 3rem;
+	}
+
+	.container 
+	.content-header {
+		padding-left: 30px;
+	}
+
+	.container 
+	.cards {
+		padding-left: 30px;
+	}
+
+	.container 
+	.cards
+	div:nth-child(2) {
+		font-size: 1rem;
+	}
+
+	.container 
+	.cards
+	div:nth-child(1)
+	button {
+		position: absolute;
+		border:none;
+		background-color: transparent;
+		top: 120px;
+		left: 75%;
+	}
+}
