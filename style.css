@@ -51,6 +51,18 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	animation: 1s navigation ease-in-out;
+}
+
+@keyframes navigation {
+	to {
+		position: fixed;
+	}
+
+	from {
+		position: absolute;
+		top: -100px;
+	}
 }
 
 nav
@@ -110,13 +122,36 @@ li:nth-child(6) a {
 
 .container 
 .content-header p:nth-child(1) {
+	opacity: 0;
 	font-size: 2rem;
 	margin-block-start: 1em;
 	margin-block-end: 0;
+	opacity: 0;
+}
+
+.active {
+	opacity: 1;
+	animation-duration: 1s;
+	animation-name: p; 
+	animation-iteration-count: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes p {
+	to {
+		margin-left: 0px;	
+		opacity: 1;
+	}
+
+	from {
+		margin-left: -30px;
+		opacity: 0;
+	}
 }
 
 .container 
 .content-header h1 {
+	opacity: 0;
 	font-size: 5rem;
 	margin-block-start: 0;
 	margin-block-end: .30em;
@@ -124,6 +159,7 @@ li:nth-child(6) a {
 
 .container 
 .content-header button {
+	opacity: 0;
 	border:none;
 	background-color: transparent;
 	color: var(--light-color);
@@ -203,6 +239,7 @@ div:nth-child(2) {
 .container 
 .videos-fluid 
 .video-content {
+	opacity: 0;
 	width: 150px;
 	height: 240px;
 	overflow: hidden;
@@ -212,6 +249,26 @@ div:nth-child(2) {
 	border-radius: 15px;
 	position: relative;
 	transition: .3s ease-in-out;
+}
+
+.active-video {
+	opacity: 1;
+	animation-duration: 1s;
+	animation-name: card; 
+	animation-iteration-count: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes card {
+	to {
+		margin-left: 0px;	
+		opacity: 1;
+	}
+
+	from {
+		margin-left: -30px;
+		opacity: 0;
+	}
 }
 
 .container 
